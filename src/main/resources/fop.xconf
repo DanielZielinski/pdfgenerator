@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<fop version="1.0">
+
+    <strict-configuration>true</strict-configuration>
+
+    <strict-validation>true</strict-validation>
+
+    <base>./</base>
+
+    <font-base>./</font-base>
+
+    <!-- Source resolution in dpi (dots/pixels per inch) for determining the size of pixels in SVG and bitmap images, default: 72dpi -->
+    <source-resolution>72</source-resolution>
+    <!-- Target resolution in dpi (dots/pixels per inch) for specifying the target resolution for generated bitmaps, default: 72dpi -->
+    <target-resolution>72</target-resolution>
+
+    <default-page-settings height="11in" width="8.26in"/>
+
+    <renderers>
+        <renderer mime="application/pdf">
+            <filterList>
+                <value>flate</value>
+            </filterList>
+            <fonts>
+                <font embed-url="src/main/resources/static/assets/fonts/fontawesome-webfont.ttf">
+                    <font-triplet name="FontAwesome" style="normal" weight="normal"/>
+                </font>
+                <font embed-url="src/main/resources/static/assets/fonts/Lato-Light.ttf">
+                    <font-triplet name="LatoLight" style="normal" weight="normal"/>
+                </font>
+                <font embed-url="src/main/resources/static/assets/fonts/Lato-Medium.ttf">
+                    <font-triplet name="LatoMedium" style="normal" weight="normal"/>
+                </font>
+                <font embed-url="src/main/resources/static/assets/fonts/Lato-Heavy.ttf">
+                    <font-triplet name="LatoHeavy" style="normal" weight="normal"/>
+                </font>
+            </fonts>
+        </renderer>
+    </renderers>
+</fop>

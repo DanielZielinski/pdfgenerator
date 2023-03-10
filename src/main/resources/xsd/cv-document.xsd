@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="http://pdfgenerator.zielinski.daniel"
+           xmlns:tns="http://pdfgenerator.zielinski.daniel">
+    
+    <xs:complexType name="PersonalDataType">
+        <xs:sequence>
+            <xs:element name="firstName" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="lastName" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="jobPosition" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="birth" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="firstAddressLine" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="secondAddressLine" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="phoneNumber" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="ExperienceType">
+        <xs:sequence>
+            <xs:element name="dateFrom" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="dateTo" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="jobPosition" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="companyName" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="jobDescription" type="xs:string" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="ExperienceListType">
+        <xs:sequence>
+            <xs:element name="experience" type="tns:ExperienceType" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="EducationType">
+        <xs:sequence>
+            <xs:element name="dateFrom" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="dateTo" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="school" type="xs:string" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="EducationListType">
+        <xs:sequence>
+            <xs:element name="education" type="tns:EducationType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="SkillListType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="InterestListType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LanguageType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="level" type="xs:string" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LanguageListType">
+        <xs:sequence>
+            <xs:element name="language" type="tns:LanguageType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CvDocumentType">
+        <xs:sequence>
+            <xs:element name="personalData" type="tns:PersonalDataType"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="experienceList" type="tns:ExperienceListType"  minOccurs="0" maxOccurs="1" />
+            <xs:element name="educationList" type="tns:EducationListType"  minOccurs="0" maxOccurs="1" />
+            <xs:element name="skillList" type="tns:SkillListType"  minOccurs="0" maxOccurs="1" />
+            <xs:element name="languageList" type="tns:LanguageListType"  minOccurs="0" maxOccurs="1" />
+            <xs:element name="interestList" type="tns:InterestListType"  minOccurs="0" maxOccurs="1" />
+            <xs:element name="confidentialityClause" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="CvDocument" type="tns:CvDocumentType" />
+
+</xs:schema>

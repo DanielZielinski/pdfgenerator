@@ -1,0 +1,21 @@
+<jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:annox="http://annox.dev.java.net"
+               xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+               jaxb:version="2.1"
+               jaxb:extensionbindingprefixes="annox">
+
+    <jaxb:bindings schemaLocation="../xsd/cv-document.xsd"
+                   node="xs:complexType[@name='CvDocumentType']" multiple="true">
+        <annox:annotate>
+            <annox:annotate annox:class="javax.xml.bind.annotation.XmlRootElement"
+                            name="CvDocument" namespace="http://pdfgenerator.zielinski.daniel"/>
+        </annox:annotate>
+    </jaxb:bindings>
+
+
+    <jaxb:globalBindings>
+        <xjc:serializable uid="1"/>
+    </jaxb:globalBindings>
+
+</jaxb:bindings>

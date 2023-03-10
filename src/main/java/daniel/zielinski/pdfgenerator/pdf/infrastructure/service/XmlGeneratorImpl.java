@@ -24,10 +24,6 @@ public class XmlGeneratorImpl implements XmlGenerator {
     @Override
     public File generateXml(CvDocumentType cvDocument) throws JAXBException, IOException {
 
-//        if(getCvJaxbContext() == null){
-//            setCvJaxbContext(JAXBContext.newInstance("pdfgenerator.zielinski.daniel"));
-//        }
-
         Marshaller marshaller = jaxbContext.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         StringWriter writer = new StringWriter();

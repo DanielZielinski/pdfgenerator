@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/pdf")
 public class PdfController {
 
     @Autowired
     private PdfFacade pdfFacade;
 
-    @PostMapping(value = "/document/cv", produces = MediaType.APPLICATION_PDF_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/generate", produces = MediaType.APPLICATION_PDF_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public FileSystemResource generateDocument(@RequestBody CvDocumentDTO cvDocument) throws Exception {
         return new FileSystemResource(pdfFacade.generatePdf(cvDocument));
 

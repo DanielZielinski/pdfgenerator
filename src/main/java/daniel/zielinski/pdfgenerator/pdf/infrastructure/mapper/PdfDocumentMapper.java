@@ -19,6 +19,9 @@ public interface PdfDocumentMapper {
 
     default ExperienceListType mapExperienceList(List<ExperienceDTO> value) {
         ExperienceListType experienceListType = new ExperienceListType();
+        if(value == null){
+            return null;
+        }
         experienceListType.setExperience(mapExperience(value));
         return experienceListType;
     }
@@ -28,6 +31,9 @@ public interface PdfDocumentMapper {
 
     default EducationListType mapEducationList(List<EducationDTO> value) {
         EducationListType educationListType = new EducationListType();
+        if(value == null){
+            return null;
+        }
         educationListType.setEducation(mapEducation(value));
         return educationListType;
     }
@@ -37,6 +43,9 @@ public interface PdfDocumentMapper {
 
     default SkillListType mapSkillList(List<SkillDTO> value) {
     SkillListType skillListType = new SkillListType();
+        if(value == null){
+            return null;
+        }
         skillListType.setName(mapSkills(value));
         return skillListType;
     }
@@ -50,6 +59,9 @@ public interface PdfDocumentMapper {
 
     default LanguageListType mapLanguageList(List<LanguageDTO> value){
     LanguageListType languageListType = new LanguageListType();
+        if(value == null){
+            return null;
+        }
         languageListType.setLanguage(mapLanguage(value));
         return languageListType;
     }
@@ -60,6 +72,9 @@ public interface PdfDocumentMapper {
 
     default  InterestListType mapInterestList(List<InterestDTO> value){
         InterestListType interestListType = new InterestListType();
+        if(value == null){
+            return null;
+        }
         interestListType.setName(mapInterest(value));
         return interestListType;
     }

@@ -31,7 +31,7 @@
 								</fo:inline-container>
 								<fo:inline-container inline-progression-dimension="95%">
 									<fo:block font-size="18pt" font-weight="normal" font-family="LatoHeavy">
-										<fo:inline>Doświadczenie</fo:inline>
+										<fo:inline>Experience</fo:inline>
 									</fo:block>
 								</fo:inline-container>
 							</fo:block>
@@ -49,7 +49,7 @@
 								</fo:inline-container>
 								<fo:inline-container inline-progression-dimension="95%">
 									<fo:block font-size="18pt" font-weight="normal" font-family="LatoHeavy">
-										<fo:inline>Edukacja</fo:inline>
+										<fo:inline>Education</fo:inline>
 									</fo:block>
 								</fo:inline-container>
 							</fo:block>
@@ -72,7 +72,7 @@
 			<fo:inline-container inline-progression-dimension="78%">
 				<fo:block text-align="center">
 					<fo:external-graphic
-							src="/home/daniel/projects/document-generator-pom/document-generator/src/main/resources/static/assets/avatar-placeholder.png" content-height="scale-to-fit" height="2.00in"  content-width="2.00in"/>
+							src="src/main/resources/images/avatar-placeholder.png" content-height="scale-to-fit" height="2.00in"  content-width="2.00in"/>
 				</fo:block>
 			</fo:inline-container>
 			<fo:inline-container inline-progression-dimension="11%">
@@ -126,7 +126,7 @@
 			<fo:inline-container inline-progression-dimension="11%">
 				<fo:block>
 					<fo:inline font-family="FontAwesome" color="white">
-						&#xf095;
+						&#xf0e0;
 					</fo:inline>
 				</fo:block>
 			</fo:inline-container>
@@ -158,13 +158,13 @@
 			</fo:inline-container>
 			<fo:inline-container inline-progression-dimension="70%">
 				<fo:block font-size="12pt" color="black" font-weight="normal" font-family="LatoLight">
-					<xsl:value-of select="doc:firstAddresLine"/>
+					<xsl:value-of select="doc:firstAddressLine"/>
 				</fo:block>
 			</fo:inline-container>
 			<fo:inline-container inline-progression-dimension="11%">
 				<fo:block>
 					<fo:inline font-family="FontAwesome" color="white">
-						&#xf095;
+						&#xf007;
 					</fo:inline>
 				</fo:block>
 			</fo:inline-container>

@@ -22,16 +22,16 @@
                 <value>flate</value>
             </filterList>
             <fonts>
-                <font embed-url="src/main/resources/static/assets/fonts/fontawesome-webfont.ttf">
+                <font embed-url="src/main/resources/fonts/fontawesome-webfont.ttf">
                     <font-triplet name="FontAwesome" style="normal" weight="normal"/>
                 </font>
-                <font embed-url="src/main/resources/static/assets/fonts/Lato-Light.ttf">
+                <font embed-url="src/main/resources/fonts/Lato-Light.ttf">
                     <font-triplet name="LatoLight" style="normal" weight="normal"/>
                 </font>
-                <font embed-url="src/main/resources/static/assets/fonts/Lato-Medium.ttf">
+                <font embed-url="src/main/resources/fonts/Lato-Medium.ttf">
                     <font-triplet name="LatoMedium" style="normal" weight="normal"/>
                 </font>
-                <font embed-url="src/main/resources/static/assets/fonts/Lato-Heavy.ttf">
+                <font embed-url="src/main/resources/fonts/Lato-Heavy.ttf">
                     <font-triplet name="LatoHeavy" style="normal" weight="normal"/>
                 </font>
             </fonts>

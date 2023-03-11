@@ -1,4 +1,4 @@
-package daniel.zielinski.pdfgenerator.pdf.domain.dto;
+package daniel.zielinski.pdfgenerator.pdf.domain.dto.cv;
 
 import lombok.Data;
 
@@ -15,8 +15,5 @@ public class CvDocumentDTO implements Serializable {
     private List<LanguageDTO> languageList;
     private PersonalDataDTO personalData;
     private List<SkillDTO> skillList;
-
-
-
 
 }

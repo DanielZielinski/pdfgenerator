@@ -4,10 +4,9 @@ import daniel.zielinski.pdfgenerator.CvDocumentType;
 
 import javax.xml.bind.JAXBException;
 import java.io.File;
-import java.io.IOException;
 
 
 public interface XmlGenerator {
 
-    File generateXml(CvDocumentType cvDocument) throws JAXBException, IOException;
+    File generateXml(CvDocumentType cvDocument, File resultXmlFile) throws JAXBException;
 }

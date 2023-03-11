@@ -1,4 +1,4 @@
-package daniel.zielinski.pdfgenerator.pdf.domain.dto;
+package daniel.zielinski.pdfgenerator.pdf.domain.dto.cv;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

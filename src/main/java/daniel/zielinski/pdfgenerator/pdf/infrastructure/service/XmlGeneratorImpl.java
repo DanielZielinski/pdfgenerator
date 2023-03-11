@@ -10,31 +10,17 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import java.io.File;
-import java.io.IOException;
-import java.io.StringWriter;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 @RequiredArgsConstructor
 @Service
-public class XmlGeneratorImpl implements XmlGenerator {
+class XmlGeneratorImpl implements XmlGenerator {
 
     private final JAXBContext jaxbContext;
 
-    @Override
-    public File generateXml(CvDocumentType cvDocument) throws JAXBException, IOException {
-
+    public File generateXml(CvDocumentType cvDocument, File resultXmlFile) throws JAXBException {
         Marshaller marshaller = jaxbContext.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-        StringWriter writer = new StringWriter();
-
-        marshaller.marshal(cvDocument, writer);
-
-        File cvFile = new File("/tmp/cv-document.xml");
-
-        Files.write(Paths.get(cvFile.getAbsolutePath()), writer.toString().getBytes());
-
-        return cvFile;
-
+        marshaller.marshal(cvDocument, resultXmlFile);
+        return resultXmlFile;
     }
 }

@@ -2,7 +2,7 @@ package daniel.zielinski.pdfgenerator.pdf.infrastructure.mapper;
 
 
 import daniel.zielinski.pdfgenerator.*;
-import daniel.zielinski.pdfgenerator.pdf.domain.dto.*;
+import daniel.zielinski.pdfgenerator.pdf.domain.dto.cv.*;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;

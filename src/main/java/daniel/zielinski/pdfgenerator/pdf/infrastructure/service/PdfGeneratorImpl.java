@@ -47,6 +47,4 @@ public class PdfGeneratorImpl implements PdfGenerator {
         return resultPdfFile;
     }
 
-
-
 }

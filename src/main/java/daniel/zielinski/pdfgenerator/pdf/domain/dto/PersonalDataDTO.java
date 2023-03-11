@@ -18,4 +18,5 @@ public class PersonalDataDTO {
     private String firstAddressLine;
     private String secondAddressLine;
     private String phoneNumber;
+    private String githubLink;
 }

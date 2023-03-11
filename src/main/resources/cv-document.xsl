@@ -170,6 +170,57 @@
 			</fo:inline-container>
 		</fo:block>
 
+		<fo:block margin-top="20pt">
+			<fo:inline-container inline-progression-dimension="11%">
+				<fo:block>
+				</fo:block>
+			</fo:inline-container>
+			<fo:inline-container inline-progression-dimension="70%">
+				<fo:block font-size="12pt" color="black" font-weight="normal" font-family="LatoLight">
+					<xsl:value-of select="doc:secondAddressLine"/>
+				</fo:block>
+			</fo:inline-container>
+		</fo:block>
+
+
+		<fo:block margin-top="20pt">
+			<fo:inline-container inline-progression-dimension="11%">
+				<fo:block>
+				</fo:block>
+			</fo:inline-container>
+			<fo:inline-container inline-progression-dimension="70%">
+				<fo:block font-size="12pt" color="black" font-weight="normal" font-family="LatoLight">
+					This resume was generated using following repository
+				</fo:block>
+			</fo:inline-container>
+			<fo:inline-container inline-progression-dimension="11%">
+				<fo:block>
+					<fo:inline font-family="FontAwesome" color="white">
+						&#xF05A;
+					</fo:inline>
+				</fo:block>
+			</fo:inline-container>
+		</fo:block>
+
+		<fo:block margin-top="20pt">
+			<fo:inline-container inline-progression-dimension="11%">
+				<fo:block>
+				</fo:block>
+			</fo:inline-container>
+			<fo:inline-container inline-progression-dimension="70%">
+				<fo:block font-size="12pt" color="black" font-weight="normal" font-family="LatoLight">
+					<xsl:value-of select="doc:githubLink"/>
+				</fo:block>
+			</fo:inline-container>
+			<fo:inline-container inline-progression-dimension="11%">
+				<fo:block>
+					<fo:inline font-family="FontAwesome" color="white">
+						&#xf113;
+					</fo:inline>
+				</fo:block>
+			</fo:inline-container>
+		</fo:block>
+
 	</xsl:template>
 
 	<xsl:template match="/doc:CvDocument/doc:educationList/doc:education">

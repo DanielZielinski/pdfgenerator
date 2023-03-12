@@ -21,7 +21,44 @@
 							</fo:block>
 						</fo:inline-container>
 						<fo:inline-container inline-progression-dimension="46%">
-							<xsl:apply-templates select="doc:personalData"/>
+
+							<xsl:apply-templates select="doc:personalData">
+								<xsl:with-param name="githubLink" select="doc:githubLink" />
+							</xsl:apply-templates>
+
+
+							<fo:block margin-top="30pt">
+								<fo:inline-container inline-progression-dimension="11%">
+									<fo:block>
+									</fo:block>
+								</fo:inline-container>
+								<fo:inline-container inline-progression-dimension="75%">
+									<fo:block font-size="14pt" font-weight="normal" font-family="LatoMedium">
+										<fo:inline-container inline-progression-dimension="92%">
+											<fo:block font-size="14pt" font-weight="normal" font-family="LatoMedium">
+												<fo:inline>Skills</fo:inline>
+											</fo:block>
+										</fo:inline-container>
+										<fo:inline-container inline-progression-dimension="8%">
+											<fo:block>
+												<fo:inline font-family="FontAwesome" color="black" font-size="18pt">
+													&#xF085;
+												</fo:inline>
+											</fo:block>
+										</fo:inline-container>
+									</fo:block>
+									<fo:block font-size="18pt" font-weight="normal" font-family="LatoHeavy">
+										<fo:leader leader-pattern="rule" leader-length="100%"  rule-thickness="0.5pt"/>
+									</fo:block>
+								</fo:inline-container>
+								<fo:inline-container inline-progression-dimension="14%">
+									<fo:block>
+									</fo:block>
+								</fo:inline-container>
+							</fo:block>
+
+
+
 						</fo:inline-container>
 						<fo:inline-container inline-progression-dimension="52%">
 							<fo:block>
@@ -32,6 +69,9 @@
 								<fo:inline-container inline-progression-dimension="95%">
 									<fo:block font-size="18pt" font-weight="normal" font-family="LatoHeavy">
 										<fo:inline>Experience</fo:inline>
+									</fo:block>
+									<fo:block font-size="18pt" font-weight="normal" font-family="LatoHeavy">
+										<fo:leader leader-pattern="rule" leader-length="94%" rule-style="solid" rule-thickness="0.5pt"/>
 									</fo:block>
 								</fo:inline-container>
 							</fo:block>
@@ -50,6 +90,9 @@
 								<fo:inline-container inline-progression-dimension="95%">
 									<fo:block font-size="18pt" font-weight="normal" font-family="LatoHeavy">
 										<fo:inline>Education</fo:inline>
+									</fo:block>
+									<fo:block font-size="18pt" font-weight="normal" font-family="LatoHeavy">
+										<fo:leader leader-pattern="rule" leader-length="94%" rule-style="solid" rule-thickness="0.5pt"/>
 									</fo:block>
 								</fo:inline-container>
 							</fo:block>
@@ -118,8 +161,38 @@
 				<fo:block>
 				</fo:block>
 			</fo:inline-container>
+			<fo:inline-container inline-progression-dimension="75%">
+				<fo:block font-size="14pt" font-weight="normal" font-family="LatoMedium">
+					<fo:inline-container inline-progression-dimension="92%">
+						<fo:block font-size="14pt" font-weight="normal" font-family="LatoMedium">
+							<fo:inline>Personal Data</fo:inline>
+						</fo:block>
+					</fo:inline-container>
+					<fo:inline-container inline-progression-dimension="8%">
+						<fo:block>
+							<fo:inline font-family="FontAwesome" color="black" font-size="18pt">
+								&#xF015;
+							</fo:inline>
+						</fo:block>
+					</fo:inline-container>
+				</fo:block>
+				<fo:block font-size="18pt" font-weight="normal" font-family="LatoHeavy">
+					<fo:leader leader-pattern="rule" leader-length="100%"  rule-thickness="0.5pt"/>
+				</fo:block>
+			</fo:inline-container>
+			<fo:inline-container inline-progression-dimension="14%">
+				<fo:block>
+				</fo:block>
+			</fo:inline-container>
+		</fo:block>
+
+		<fo:block margin-top="15pt">
+			<fo:inline-container inline-progression-dimension="11%">
+				<fo:block>
+				</fo:block>
+			</fo:inline-container>
 			<fo:inline-container inline-progression-dimension="70%">
-				<fo:block font-size="12pt" color="black" font-weight="normal" font-family="LatoLight">
+				<fo:block font-size="11pt" color="black" font-weight="normal" font-family="LatoLight">
 					<xsl:value-of select="doc:email"/>
 				</fo:block>
 			</fo:inline-container>
@@ -138,7 +211,7 @@
 				</fo:block>
 			</fo:inline-container>
 			<fo:inline-container inline-progression-dimension="70%">
-				<fo:block font-size="12pt" color="black" font-weight="normal" font-family="LatoLight">
+				<fo:block font-size="11pt" color="black" font-weight="normal" font-family="LatoLight">
 					<xsl:value-of select="doc:phoneNumber"/>
 				</fo:block>
 			</fo:inline-container>
@@ -157,8 +230,8 @@
 				</fo:block>
 			</fo:inline-container>
 			<fo:inline-container inline-progression-dimension="70%">
-				<fo:block font-size="12pt" color="black" font-weight="normal" font-family="LatoLight">
-					<xsl:value-of select="doc:firstAddressLine"/>
+				<fo:block font-size="11pt" color="black" font-weight="normal" font-family="LatoLight">
+					<xsl:value-of select="concat(doc:firstAddressLine, ', ', doc:secondAddressLine)"/>
 				</fo:block>
 			</fo:inline-container>
 			<fo:inline-container inline-progression-dimension="11%">
@@ -176,40 +249,9 @@
 				</fo:block>
 			</fo:inline-container>
 			<fo:inline-container inline-progression-dimension="70%">
-				<fo:block font-size="12pt" color="black" font-weight="normal" font-family="LatoLight">
-					<xsl:value-of select="doc:secondAddressLine"/>
-				</fo:block>
-			</fo:inline-container>
-		</fo:block>
-
-
-		<fo:block margin-top="20pt">
-			<fo:inline-container inline-progression-dimension="11%">
-				<fo:block>
-				</fo:block>
-			</fo:inline-container>
-			<fo:inline-container inline-progression-dimension="70%">
-				<fo:block font-size="12pt" color="black" font-weight="normal" font-family="LatoLight">
-					This resume was generated using following repository
-				</fo:block>
-			</fo:inline-container>
-			<fo:inline-container inline-progression-dimension="11%">
-				<fo:block>
-					<fo:inline font-family="FontAwesome" color="white">
-						&#xF05A;
-					</fo:inline>
-				</fo:block>
-			</fo:inline-container>
-		</fo:block>
-
-		<fo:block margin-top="20pt">
-			<fo:inline-container inline-progression-dimension="11%">
-				<fo:block>
-				</fo:block>
-			</fo:inline-container>
-			<fo:inline-container inline-progression-dimension="70%">
-				<fo:block font-size="12pt" color="black" font-weight="normal" font-family="LatoLight">
-					<xsl:value-of select="doc:githubLink"/>
+				<fo:block font-size="11pt" color="black" font-weight="normal" font-family="LatoLight">
+					<fo:inline>CV was genareted here </fo:inline>
+					<fo:basic-link external-destination="https://github.com/DanielZielinski/pdfgenerator" color="black" text-decoration="underline">GitHub</fo:basic-link>
 				</fo:block>
 			</fo:inline-container>
 			<fo:inline-container inline-progression-dimension="11%">
@@ -230,7 +272,7 @@
 				</fo:block>
 			</fo:inline-container>
 			<fo:inline-container inline-progression-dimension="90%">
-				<fo:block margin-top="3pt" font-size="10pt" font-weight="normal" font-family="LatoMedium">
+				<fo:block margin-top="3pt" font-size="10pt" font-weight="normal" font-family="LatoLight">
 					<xsl:value-of select="doc:school"/>
 				</fo:block>
 			</fo:inline-container>

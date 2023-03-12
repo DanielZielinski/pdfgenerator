@@ -35,7 +35,7 @@ class PdfGeneratorImpl implements PdfGenerator {
         try (BufferedOutputStream pdfOutputStream = new BufferedOutputStream(Files.newOutputStream(pdf.toPath()))) {
             Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, fopFactory.newFOUserAgent(), pdfOutputStream);
             Transformer transformer = transformerFactory.newTransformer(new StreamSource(xsl));
-            transformer.setParameter("versionParam", "2.0");
+            transformer.setParameter("versionParam", "2.2");
             transformer.transform(new StreamSource(xml), new SAXResult(fop.getDefaultHandler()));
         }
         return pdf;

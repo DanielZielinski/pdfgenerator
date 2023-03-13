@@ -253,13 +253,13 @@
             </fo:inline-container>
             <fo:inline-container inline-progression-dimension="70%">
                 <fo:block font-size="11pt" color="black" font-weight="normal" font-family="LatoLight">
-                    <fo:inline>CV was genareted here</fo:inline>
-                    <fo:basic-link color="black" text-decoration="underline">
-                        <xsl:attribute name="external-destination">
-                            <xsl:value-of select="doc:githubLink"/>
-                        </xsl:attribute>
-                        GitHub
-                    </fo:basic-link>
+                    <fo:inline>CV was genareted here
+                        <fo:basic-link color="black" text-decoration="underline">
+                            <xsl:attribute name="external-destination">
+                                <xsl:value-of select="doc:githubLink"/>
+                            </xsl:attribute>GitHub</fo:basic-link>
+                    </fo:inline>
+
                 </fo:block>
             </fo:inline-container>
             <fo:inline-container inline-progression-dimension="11%">

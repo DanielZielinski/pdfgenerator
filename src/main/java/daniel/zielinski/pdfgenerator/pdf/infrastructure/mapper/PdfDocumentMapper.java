@@ -7,7 +7,9 @@ import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.ERROR)
 @SuppressWarnings("java:S1214")
@@ -19,19 +21,19 @@ public interface PdfDocumentMapper {
 
     default ExperienceListType mapExperienceList(List<ExperienceDTO> value) {
         ExperienceListType experienceListType = new ExperienceListType();
-        if(value == null){
+        if (value == null) {
             return null;
         }
         experienceListType.setExperience(mapExperience(value));
         return experienceListType;
     }
 
-     List<ExperienceType> mapExperience(List<ExperienceDTO> value);
+    List<ExperienceType> mapExperience(List<ExperienceDTO> value);
 
 
     default EducationListType mapEducationList(List<EducationDTO> value) {
         EducationListType educationListType = new EducationListType();
-        if(value == null){
+        if (value == null) {
             return null;
         }
         educationListType.setEducation(mapEducation(value));
@@ -42,8 +44,8 @@ public interface PdfDocumentMapper {
 
 
     default SkillListType mapSkillList(List<SkillDTO> value) {
-    SkillListType skillListType = new SkillListType();
-        if(value == null){
+        SkillListType skillListType = new SkillListType();
+        if (value == null) {
             return null;
         }
         skillListType.setSkill(mapSkills(value));
@@ -53,13 +55,26 @@ public interface PdfDocumentMapper {
     List<SkillType> mapSkills(List<SkillDTO> value);
 
 
+    default List<SkillLevelType> mapSkillLevel(int value) {
+
+        List<SkillLevelType> skillLevelTypes = new ArrayList<>();
+        for (int i = 1; i < 9; i++) {
+            SkillLevelType skillLevelType = new SkillLevelType();
+            skillLevelType.setFulfilled(i <= value);
+            skillLevelTypes.add(skillLevelType);
+        }
+
+        return skillLevelTypes;
+    }
+
+
     default String mapSkills(SkillDTO value) {
         return value.getName();
     }
 
-    default LanguageListType mapLanguageList(List<LanguageDTO> value){
-    LanguageListType languageListType = new LanguageListType();
-        if(value == null){
+    default LanguageListType mapLanguageList(List<LanguageDTO> value) {
+        LanguageListType languageListType = new LanguageListType();
+        if (value == null) {
             return null;
         }
         languageListType.setLanguage(mapLanguage(value));
@@ -69,10 +84,9 @@ public interface PdfDocumentMapper {
     List<LanguageType> mapLanguage(List<LanguageDTO> value);
 
 
-
-    default  InterestListType mapInterestList(List<InterestDTO> value){
+    default InterestListType mapInterestList(List<InterestDTO> value) {
         InterestListType interestListType = new InterestListType();
-        if(value == null){
+        if (value == null) {
             return null;
         }
         interestListType.setName(mapInterest(value));

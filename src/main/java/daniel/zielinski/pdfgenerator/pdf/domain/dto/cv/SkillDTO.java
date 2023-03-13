@@ -12,5 +12,6 @@ import lombok.NoArgsConstructor;
 public class SkillDTO {
 
     private String name;
+    private int level;
 
 }

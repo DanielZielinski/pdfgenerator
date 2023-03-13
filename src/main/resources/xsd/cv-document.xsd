@@ -8,39 +8,39 @@
     
     <xs:complexType name="PersonalDataType">
         <xs:sequence>
-            <xs:element name="firstName" type="xs:string" minOccurs="1" maxOccurs="1" />
-            <xs:element name="lastName" type="xs:string" minOccurs="1" maxOccurs="1" />
-            <xs:element name="jobPosition" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="birth" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="firstAddressLine" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="secondAddressLine" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="phoneNumber" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="githubLink" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="jobPosition" type="xs:string" minOccurs="0"/>
+            <xs:element name="birth" type="xs:string" minOccurs="0"/>
+            <xs:element name="firstAddressLine" type="xs:string" minOccurs="0"/>
+            <xs:element name="secondAddressLine" type="xs:string" minOccurs="0"/>
+            <xs:element name="phoneNumber" type="xs:string" minOccurs="0"/>
+            <xs:element name="email" type="xs:string" minOccurs="0"/>
+            <xs:element name="githubLink" type="xs:string" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
     
     <xs:complexType name="ExperienceType">
         <xs:sequence>
-            <xs:element name="dateFrom" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="dateTo" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="jobPosition" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="companyName" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="jobDescription" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="dateFrom" type="xs:string" minOccurs="0"/>
+            <xs:element name="dateTo" type="xs:string" minOccurs="0"/>
+            <xs:element name="jobPosition" type="xs:string" minOccurs="0"/>
+            <xs:element name="companyName" type="xs:string" minOccurs="0"/>
+            <xs:element name="jobDescription" type="xs:string" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
     
     <xs:complexType name="ExperienceListType">
         <xs:sequence>
-            <xs:element name="experience" type="tns:ExperienceType" minOccurs="1" maxOccurs="unbounded" />
+            <xs:element name="experience" type="tns:ExperienceType" maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
     
     <xs:complexType name="EducationType">
         <xs:sequence>
-            <xs:element name="dateFrom" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="dateTo" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="school" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="dateFrom" type="xs:string" minOccurs="0"/>
+            <xs:element name="dateTo" type="xs:string" minOccurs="0"/>
+            <xs:element name="school" type="xs:string" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
     
@@ -50,9 +50,16 @@
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="SkillLevelType">
+        <xs:sequence>
+            <xs:element name="fulfilled" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:complexType name="SkillType">
         <xs:sequence>
-            <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="name" type="xs:string" minOccurs="0"/>
+            <xs:element name="level" type="tns:SkillLevelType" minOccurs="0" maxOccurs="8" />
         </xs:sequence>
     </xs:complexType>
     
@@ -70,8 +77,8 @@
 
     <xs:complexType name="LanguageType">
         <xs:sequence>
-            <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="level" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="name" type="xs:string" minOccurs="0"/>
+            <xs:element name="level" type="xs:string" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -83,13 +90,13 @@
 
     <xs:complexType name="CvDocumentType">
         <xs:sequence>
-            <xs:element name="personalData" type="tns:PersonalDataType"  minOccurs="1" maxOccurs="1" />
-            <xs:element name="experienceList" type="tns:ExperienceListType"  minOccurs="0" maxOccurs="1" />
-            <xs:element name="educationList" type="tns:EducationListType"  minOccurs="0" maxOccurs="1" />
-            <xs:element name="skillList" type="tns:SkillListType"  minOccurs="0" maxOccurs="1" />
-            <xs:element name="languageList" type="tns:LanguageListType"  minOccurs="0" maxOccurs="1" />
-            <xs:element name="interestList" type="tns:InterestListType"  minOccurs="0" maxOccurs="1" />
-            <xs:element name="confidentialityClause" type="xs:string"  minOccurs="0" maxOccurs="1" />
+            <xs:element name="personalData" type="tns:PersonalDataType"/>
+            <xs:element name="experienceList" type="tns:ExperienceListType"  minOccurs="0"/>
+            <xs:element name="educationList" type="tns:EducationListType"  minOccurs="0"/>
+            <xs:element name="skillList" type="tns:SkillListType"  minOccurs="0"/>
+            <xs:element name="languageList" type="tns:LanguageListType"  minOccurs="0"/>
+            <xs:element name="interestList" type="tns:InterestListType"  minOccurs="0"/>
+            <xs:element name="confidentialityClause" type="xs:string"  minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 

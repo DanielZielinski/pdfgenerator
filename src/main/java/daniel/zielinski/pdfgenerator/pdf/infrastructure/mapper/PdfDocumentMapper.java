@@ -46,11 +46,11 @@ public interface PdfDocumentMapper {
         if(value == null){
             return null;
         }
-        skillListType.setName(mapSkills(value));
+        skillListType.setSkill(mapSkills(value));
         return skillListType;
     }
 
-    List<String> mapSkills(List<SkillDTO> value);
+    List<SkillType> mapSkills(List<SkillDTO> value);
 
 
     default String mapSkills(SkillDTO value) {

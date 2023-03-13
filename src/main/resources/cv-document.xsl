@@ -57,6 +57,8 @@
 								</fo:inline-container>
 							</fo:block>
 
+							<xsl:apply-templates select="doc:skillList/doc:skill"/>
+
 
 
 						</fo:inline-container>
@@ -205,7 +207,7 @@
 			</fo:inline-container>
 		</fo:block>
 
-		<fo:block margin-top="20pt">
+		<fo:block margin-top="5pt">
 			<fo:inline-container inline-progression-dimension="11%">
 				<fo:block>
 				</fo:block>
@@ -224,7 +226,7 @@
 			</fo:inline-container>
 		</fo:block>
 
-		<fo:block margin-top="20pt">
+		<fo:block margin-top="5pt">
 			<fo:inline-container inline-progression-dimension="11%">
 				<fo:block>
 				</fo:block>
@@ -243,7 +245,7 @@
 			</fo:inline-container>
 		</fo:block>
 
-		<fo:block margin-top="20pt">
+		<fo:block margin-top="5pt">
 			<fo:inline-container inline-progression-dimension="11%">
 				<fo:block>
 				</fo:block>
@@ -324,6 +326,29 @@
 			<fo:inline-container inline-progression-dimension="90%">
 				<fo:block margin-top="3pt" font-size="10pt" font-weight="normal" font-family="LatoLight" text-align="justify">
 					<xsl:value-of select="doc:jobDescription"/>
+				</fo:block>
+			</fo:inline-container>
+		</fo:block>
+	</xsl:template>
+
+
+	<xsl:template match="/doc:CvDocument/doc:skillList/doc:skill">
+
+		<fo:block margin-top="5pt">
+			<fo:inline-container inline-progression-dimension="11%">
+				<fo:block>
+				</fo:block>
+			</fo:inline-container>
+			<fo:inline-container inline-progression-dimension="30%">
+				<fo:block font-size="11pt" color="black" font-weight="normal" font-family="LatoLight">
+					<xsl:value-of select="doc:name"/>
+				</fo:block>
+			</fo:inline-container>
+			<fo:inline-container inline-progression-dimension="11%">
+				<fo:block>
+					<fo:inline font-family="FontAwesome" color="white">
+						&#xf007;
+					</fo:inline>
 				</fo:block>
 			</fo:inline-container>
 		</fo:block>

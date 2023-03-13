@@ -251,7 +251,10 @@
 			<fo:inline-container inline-progression-dimension="70%">
 				<fo:block font-size="11pt" color="black" font-weight="normal" font-family="LatoLight">
 					<fo:inline>CV was genareted here </fo:inline>
-					<fo:basic-link external-destination="https://github.com/DanielZielinski/pdfgenerator" color="black" text-decoration="underline">GitHub</fo:basic-link>
+					<fo:basic-link color="black" text-decoration="underline">
+						<xsl:attribute name="external-destination">
+							<xsl:value-of select="doc:githubLink"/>
+						</xsl:attribute>GitHub</fo:basic-link>
 				</fo:block>
 			</fo:inline-container>
 			<fo:inline-container inline-progression-dimension="11%">

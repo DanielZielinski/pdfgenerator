@@ -32,20 +32,20 @@
                                 <fo:inline-container inline-progression-dimension="75%">
                                     <fo:block font-size="14pt" font-weight="normal" font-family="LatoMedium">
                                         <fo:inline-container inline-progression-dimension="92%">
-                                            <fo:block font-size="14pt" font-weight="normal" font-family="LatoMedium">
+                                            <fo:block font-size="14pt" font-weight="normal" color="#1c3440" font-family="LatoMedium">
                                                 <fo:inline>Skills</fo:inline>
                                             </fo:block>
                                         </fo:inline-container>
                                         <fo:inline-container inline-progression-dimension="8%">
                                             <fo:block>
-                                                <fo:inline font-family="FontAwesome" color="black" font-size="18pt">
+                                                <fo:inline font-family="FontAwesome" color="#1c3440" font-size="18pt">
                                                     &#xF085;
                                                 </fo:inline>
                                             </fo:block>
                                         </fo:inline-container>
                                     </fo:block>
                                     <fo:block font-size="18pt" font-weight="normal" font-family="LatoHeavy">
-                                        <fo:leader leader-pattern="rule" leader-length="100%" rule-thickness="0.5pt"/>
+                                        <fo:leader leader-pattern="rule" leader-length="100%" rule-thickness="0.5pt" color="#1c3440"/>
                                     </fo:block>
                                 </fo:inline-container>
                                 <fo:inline-container inline-progression-dimension="14%">
@@ -132,7 +132,7 @@
             </fo:inline-container>
             <fo:inline-container inline-progression-dimension="78%">
                 <fo:block text-align="center" font-size="18pt" font-weight="normal" font-family="LatoMedium"
-                          color="black">
+                          color="#1c3440">
                     <xsl:value-of select="concat(doc:firstName , ' ', doc:lastName)"/>
                 </fo:block>
             </fo:inline-container>
@@ -167,20 +167,20 @@
             <fo:inline-container inline-progression-dimension="75%">
                 <fo:block font-size="14pt" font-weight="normal" font-family="LatoMedium">
                     <fo:inline-container inline-progression-dimension="92%">
-                        <fo:block font-size="14pt" font-weight="normal" font-family="LatoMedium">
+                        <fo:block font-size="14pt" font-weight="normal" font-family="LatoMedium" color="#1c3440">
                             <fo:inline>Personal Data</fo:inline>
                         </fo:block>
                     </fo:inline-container>
                     <fo:inline-container inline-progression-dimension="8%">
                         <fo:block>
-                            <fo:inline font-family="FontAwesome" color="black" font-size="18pt">
+                            <fo:inline font-family="FontAwesome" color="#1c3440" font-size="18pt">
                                 &#xF015;
                             </fo:inline>
                         </fo:block>
                     </fo:inline-container>
                 </fo:block>
                 <fo:block font-size="18pt" font-weight="normal" font-family="LatoHeavy">
-                    <fo:leader leader-pattern="rule" leader-length="100%" rule-thickness="0.5pt"/>
+                    <fo:leader leader-pattern="rule" leader-length="100%" rule-thickness="0.5pt" color="#1c3440"/>
                 </fo:block>
             </fo:inline-container>
             <fo:inline-container inline-progression-dimension="14%">
@@ -201,7 +201,7 @@
             </fo:inline-container>
             <fo:inline-container inline-progression-dimension="11%">
                 <fo:block>
-                    <fo:inline font-family="FontAwesome" color="white">
+                    <fo:inline font-family="FontAwesome" color="#f7f5bc">
                         &#xf0e0;
                     </fo:inline>
                 </fo:block>
@@ -220,7 +220,7 @@
             </fo:inline-container>
             <fo:inline-container inline-progression-dimension="11%">
                 <fo:block>
-                    <fo:inline font-family="FontAwesome" color="white">
+                    <fo:inline font-family="FontAwesome" color="#f7f5bc">
                         &#xf095;
                     </fo:inline>
                 </fo:block>
@@ -239,7 +239,7 @@
             </fo:inline-container>
             <fo:inline-container inline-progression-dimension="11%">
                 <fo:block>
-                    <fo:inline font-family="FontAwesome" color="white">
+                    <fo:inline font-family="FontAwesome" color="#f7f5bc">
                         &#xf007;
                     </fo:inline>
                 </fo:block>
@@ -264,7 +264,7 @@
             </fo:inline-container>
             <fo:inline-container inline-progression-dimension="11%">
                 <fo:block>
-                    <fo:inline font-family="FontAwesome" color="white">
+                    <fo:inline font-family="FontAwesome" color="#f7f5bc">
                         &#xf113;
                     </fo:inline>
                 </fo:block>
@@ -344,7 +344,7 @@
                 </fo:block>
             </fo:inline-container>
             <fo:inline-container inline-progression-dimension="30%">
-                <fo:block font-size="11pt" color="black" font-weight="normal" font-family="LatoLight">
+                <fo:block font-size="11pt" color="#1c3440" font-weight="normal" font-family="LatoLight">
                     <xsl:value-of select="doc:name"/>
                 </fo:block>
             </fo:inline-container>
